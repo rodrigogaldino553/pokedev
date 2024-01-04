@@ -1,8 +1,11 @@
 class HomeController < ApplicationController
   def index
-  end
+    dev = []
 
-  def search_dev
-
+    if params[:q].present?
+      dev_username = params[:q][:username]
+      dev_data = GithubService.search(dev_username)
+      puts dev_data
+    end
   end
 end

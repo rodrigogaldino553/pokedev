@@ -1,4 +1,4 @@
-<%= form_for :dev, url: search_dev_path do |form| %>
-  <%= form.text_field :username %>
+<%= form_for :q, url: root_path, method: :get do |form| %>
+  <%= form.text_field :username, placeholder: 'Type dev username...' %>
   <%= form.submit 'Catch it!' %>
 <% end %>

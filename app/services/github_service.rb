@@ -3,7 +3,7 @@
 class GithubService
   require 'net/http'
 
-  def self.get_user(username)
+  def self.search(username)
     url = "https://api.github.com/users/#{username}"
     uri = URI(url)
     response = Net::HTTP.get(uri)
