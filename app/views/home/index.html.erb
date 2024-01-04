@@ -2,3 +2,7 @@
   <%= form.text_field :username, placeholder: 'Type dev username...' %>
   <%= form.submit 'Catch it!' %>
 <% end %>
+
+<% if @dev.any? %>
+  <%= image_tag @dev['avatar_url'] %>
+<% end %>
